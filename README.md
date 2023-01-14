@@ -5,7 +5,7 @@ This is the official repository of "Diffusion Guided Domain Adaptation of Image 
 ## checkpoints to start with:
 Please download stylegan2 and eg3d checkpoints from (https://drive.google.com/drive/folders/1kY9wEK7hQaO_MGMkeHVmBKfXcfUoYrH4?usp=sharing), and put them in the download folder. 
 
-** The code is ready to run now after downloading checkpoints.  **
+**_The code is ready to run now after downloading checkpoints._**
 
 A few notices:
 + Please use .sh files as entrances. A requirements.txt is provvided to install packages.
