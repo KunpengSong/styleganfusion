@@ -2,4 +2,4 @@
 
 This is the official repository of "Diffusion Guided Domain Adaptation of Image Generators".
 
-(code coming soon)
+Please use .sh files as entrances.
