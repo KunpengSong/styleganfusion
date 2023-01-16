@@ -1,6 +1,6 @@
 # styleganfusion
 
-This is the official repository of "Diffusion Guided Domain Adaptation of Image Generators".
+This is the official repository of "[Diffusion Guided Domain Adaptation of Image Generators](https://arxiv.org/abs/2212.04473)".
 
 ## checkpoints to start with:
 Please download [stylegan2](https://github.com/rinongal/StyleGAN-nada) and [EG3D](https://github.com/NVlabs/eg3d) checkpoints from [our shared Google Drive](https://drive.google.com/drive/folders/1kY9wEK7hQaO_MGMkeHVmBKfXcfUoYrH4?usp=sharing), and put them in the download folder. They are publicly available checkpoints and are the same as the official ones. 
