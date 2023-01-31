@@ -36,7 +36,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --size ${img_size} \
 --output_dir logs/${exp_name} \
 --lr 0.002  \
 --frozen_gen_ckpt ${ckpt}  \
---iter 2001  \
+--iter 1001  \
 --target_class "${prompt}"  \
 --output_interval 50  \
 --save_interval 10000000 \
@@ -60,7 +60,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --size ${img_size} \
 --output_dir logs/${exp_name} \
 --lr 0.002  \
 --frozen_gen_ckpt ${ckpt}  \
---iter 2001  \
+--iter 1001  \
 --target_class "${prompt}"  \
 --output_interval 50  \
 --save_interval 10000000 \
