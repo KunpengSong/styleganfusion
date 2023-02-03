@@ -125,18 +125,22 @@ def train(args):
                     f"{ckpt_dir}/{str(i).zfill(6)}.pt",
                 )
                 
-    for i in range(args.num_grid_outputs):
-        net.eval()
-
-        with torch.no_grad():
-            sample_z = mixing_noise(16, z_dim, 0, device)
-            [sampled_src, sampled_dst], _ = net(sample_z, truncation=args.sample_truncation)
-
-            if args.crop_for_cars:
-                sampled_dst = sampled_dst[:, :, 64:448, :]
-
-        save_paper_image_grid(sampled_dst, sample_dir, f"sampled_grid_{i}.png")
+    # Generate 2000 images for FID score
+    if True:
+        for j in tqdm(range(2000)):
+            z = torch.randn(1, z_dim, device=device)
             
+            [sampled_src_monitor, sampled_dst_monitor], loss = net([z], truncation=args.sample_truncation,evaluate=True)
+    
+            individual_path = os.path.join(sample_dir,'individual')
+            individual_path_frozen = os.path.join(individual_path,'frozen')
+            individual_path_train = os.path.join(individual_path,'train')
+            os.makedirs(individual_path_frozen,exist_ok=True)
+            os.makedirs(individual_path_train,exist_ok=True)
+
+            save_images(sampled_src_monitor, individual_path_frozen, "sample", 1, j)
+            save_images(sampled_dst_monitor, individual_path_train, "sample", 1, j)
+
     
 
 if __name__ == "__main__":
