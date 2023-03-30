@@ -18,6 +18,7 @@ Please download [StyleGAN2](https://github.com/rinongal/StyleGAN-nada) or [EG3D]
 + We use [diffusers](https://huggingface.co/docs/diffusers/installation) to load StableDiffusion V1.4 checkpoint from Huggingface. A TOKEN file is included to get access to the checkpoints. Please replace it with your own token file, which can be applied [here](https://huggingface.co/CompVis/stable-diffusion-v1-4).
 + To calculate FID scores, please use metrics/IS_FID_prdc/src/run_FID.sh as entrance. (credit to [StudioGAN](https://github.com/POSTECH-CVLab/PyTorch-StudioGAN))
 
+More information: We implement our approach on two versions of StyleGAN2: the **StyleGAN-NaDa** (this repository) and the **StyleGAN-Rosinality**. To fully reproduce FIDs for animal experiments, please check our **StyleGAN-Rosinality** version. We share the code, training logs and images at [this google drive](https://drive.google.com/file/d/1g7ItiVQX9xYunEwKwrJi_T-Q3xQDZ__V/view?usp=sharing). 
 
 If you find this work useful, please cite:
 ```
